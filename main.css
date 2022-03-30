@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 :root{
 /*Primary color*/
@@ -18,6 +19,10 @@
 --White: hsl(0, 0%, 100%);
 --Black: hsl(0, 0%, 0%);
 }
+body{
+    background: var(--White);
+    height: 100vh;
+}
 nav{
     display: flex;
     width: 100%;
@@ -25,7 +30,10 @@ nav{
     padding: 20px;
     justify-content: center;
     align-items: center;
-    box-shadow: 10px 0 2px var(--Black);
+    box-shadow: 1px 0 5px var(--Black);
+}
+.menu-icon{
+    display: none;
 }
 .nav-logo{
     margin-right: 100px;
@@ -44,6 +52,7 @@ li a{
     text-decoration: none;
     margin-right: 30px;
     font-family: sans-serif;
+    color: var(--Darkgrayishblue);
 }
 .action{
     display: flex;
@@ -54,5 +63,116 @@ li a{
     margin-right: 40px;
 }
 .action img{
-    width: 30px;
+    width: 40px;
+}
+.cart:hover{
+    cursor: pointer;
+    border-bottom: 5px solid var(--Orange);
+}
+.profile-avatar img:hover{
+    border: 5px solid var(--Orange);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+nav a:hover{
+    border-bottom: 5px solid var(--Orange);
+    color: var(--Black);
+    padding-bottom: 38px;
+    transition: ease-in-out 500ms;
+}
+/* product section*/
+main{
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+   
+}
+.product-section{
+    position: relative;
+    top: 50px;
+    margin-left: 90px;
+    margin-bottom: 100px;
+}
+.big-view img{
+    width: 350px;
+    border-radius: 10px;
+    
+}
+.changer{
+    display: none;
+}
+.product-thumbnails{
+    display: flex;
+    margin-right: 20px;
+}
+.product-thumbnails img{
+    margin-right: 20px;
+    width: 72px;
+    border-radius: 10px;
+}
+.product-thumbnails img:hover{
+    background-color: var(--White);
+    cursor: pointer;
+    opacity: 0.5;
+}
+.product-thumbnails img:active{
+    border: 5px solid var(--Orange);
+}
+h3{
+    color: var(--Orange);
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+h1{
+    width: 300px;
+    margin-bottom: 20px;
+}
+.product-info p{
+    font-size: 15px;
+    width: 460px;
+    color: var(--Darkgrayishblue);
+    margin-bottom: 20px;
+}
+.price-tag span{
+    font-weight: bold;
+    background-color: var(--Paleorange);
+    color: var(--Orange);
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.price-tag{
+    display: flex;
+    font-weight: bold;
+    color: var(--Black);
+    border-radius: 5px;
+}
+.quantity{
+    background-color: var(--Grayishblue);
+    color: var(--Orange);
+    width: 60px;
+    align-items: center;
+    
+}
+.action{
+    display: flex;
+    
+}
+button{
+    cursor: pointer;
+    background-color: var(--Orange);
+    color: var(--White);
+    font-family: sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 50px;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: var(--Paleorange);
 }
